@@ -7,7 +7,8 @@ public class People {
 	private double height;
 	private int age;
 	private int sex;
-	
+	private String name="WangZhongling";
+			
 	public People() {
 		
 	}
@@ -53,5 +54,20 @@ public class People {
 
 	public void setSex(int sex) {
 		this.sex = sex;
+	}
+	
+	public class Student{
+		String ID="2018206";
+		
+		 void stuInfo() {
+			 System.out.println("访问外部类中的name:"+name);
+			 System.out.println("访问内部类中的ID:"+ID);
+		 }
+	}
+	
+	public static void main(String[] args) {
+		People a=new People();
+		Student b=a.new Student();
+		b.stuInfo();
 	}
 }
