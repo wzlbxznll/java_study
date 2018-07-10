@@ -1,73 +1,41 @@
 ﻿package com.shiyanlou;
 
-import javax.swing.plaf.synth.SynthSpinnerUI;
-
-public class People {
-
-	private double height;
-	private int age;
-	private int sex;
-	private String name="WangZhongling";
-			
-	public People() {
-		
-	}
-	
-	public People(double h, int a, int s) {
-		height=h;
-		age=a;
-		sex=s;
-	}
-	
-	void cry() {
-		System.out.println("我在哭！");
-	}
-	void laugh() {
-		System.out.println("我在笑！");
-	}
-	void printBaseMes() {
-		System.out.println("我的身高是"+height+"cm");
-		System.out.println("我的年龄是"+age+"岁");
-		if(this.sex==0)
-			System.out.println("我是男性！");
-		else
-			System.out.println("我是女性！");
-	}
-	double getHeight() {
-		return height;	
-	}
-	void setHeight(double height) {
-		this.height=height;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public int getSex() {
-		return sex;
-	}
-
-	public void setSex(int sex) {
-		this.sex = sex;
-	}
-	
-	public class Student{
-		String ID="2018206";
-		
-		 void stuInfo() {
-			 System.out.println("访问外部类中的name:"+name);
-			 System.out.println("访问内部类中的ID:"+ID);
-		 }
-	}
-	
-	public static void main(String[] args) {
-		People a=new People();
-		Student b=a.new Student();
-		b.stuInfo();
-	}
+//外部类People
+public class People {    
+    //定义在外部类中的方法内：
+    public void peopleInfo() {
+        final String sex = "man";  //外部类方法中的常量
+        class Student {
+            String ID = "20151234"; //内部类中的常量
+            public void print() {
+                System.out.println("访问外部类的方法中的常量sex：" + sex);
+                System.out.println("访问内部类中的变量ID:" + ID);
+            }
+        }
+        Student a = new Student();  //创建方法内部类的对象
+        a.print();//调用内部类的方法
+    }
+    //定义在外部类中的作用域内
+    public void peopleInfo2(boolean b) {
+        if(b){
+            final String sex = "man";  //外部类方法中的常量
+            class Student {
+                String ID = "20151234"; //内部类中的常量
+                public void print() {
+                    System.out.println("访问外部类的方法中的常量sex：" + sex);
+                    System.out.println("访问内部类中的变量ID:" + ID);
+                }
+            }
+            Student a = new Student();  //创建方法内部类的对象
+            a.print();//调用内部类的方法
+        }
+    }
+    //测试方法内部类
+    public static void main(String[] args) {
+        People b = new People(); //创建外部类的对象
+        System.out.println("定义在方法内：===========");
+        b.peopleInfo();  //调用外部类的方法
+        System.out.println("定义在作用域内：===========");
+        b.peopleInfo2(true);
+    }
 }
