@@ -5,8 +5,8 @@ import javax.swing.plaf.synth.SynthSpinnerUI;
 public class People {
 
 	private double height;
-	int age;
-	int sex;
+	private int age;
+	private int sex;
 	
 	public People() {
 		
@@ -35,7 +35,23 @@ public class People {
 	double getHeight() {
 		return height;	
 	}
-	void setHeight(double newHeight) {
-		height=newHeight;
+	void setHeight(double height) {
+		this.height=height;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public int getSex() {
+		return sex;
+	}
+
+	public void setSex(int sex) {
+		this.sex = sex;
 	}
 }
