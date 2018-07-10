@@ -6,9 +6,10 @@ public class NewObject {
 			People WangZhongling =new People(163,22,0);
 			
 			WangZhongling.age=23;
-			WangZhongling.height=160;
+			WangZhongling.setHeight(160.0);
 			WangZhongling.printBaseMes();
 			WangZhongling.laugh();
+			System.out.println("WangZhongling的身高是"+WangZhongling.getHeight());
 	}
 
 }

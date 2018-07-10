@@ -4,7 +4,7 @@ import javax.swing.plaf.synth.SynthSpinnerUI;
 
 public class People {
 
-	double height;
+	private double height;
 	int age;
 	int sex;
 	
@@ -31,6 +31,11 @@ public class People {
 			System.out.println("我是男性！");
 		else
 			System.out.println("我是女性！");
-		
+	}
+	double getHeight() {
+		return height;	
+	}
+	void setHeight(double newHeight) {
+		height=newHeight;
 	}
 }
