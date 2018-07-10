@@ -8,6 +8,7 @@ public class NewObject {
 			WangZhongling.age=23;
 			WangZhongling.height=160;
 			WangZhongling.printBaseMes();
+			WangZhongling.laugh();
 	}
 
 }

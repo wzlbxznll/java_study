@@ -27,7 +27,7 @@ public class People {
 	void printBaseMes() {
 		System.out.println("我的身高是"+height+"cm");
 		System.out.println("我的年龄是"+age+"岁");
-		if(this.age==0)
+		if(this.sex==0)
 			System.out.println("我是男性！");
 		else
 			System.out.println("我是女性！");
