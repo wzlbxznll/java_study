@@ -13,4 +13,8 @@ public class Dog extends Animal {
 				System.out.println("汪！汪！汪！");
 			}
 			
+			public void dogType() {
+				System.out.println("这是条狗。");
+			}
+			
 }
