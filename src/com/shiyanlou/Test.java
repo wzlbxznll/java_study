@@ -6,12 +6,13 @@ public class Test {
 //			Dog a =new Dog();
 //			a.legNum=4;
 //			a.bark();
-			Animal a=new Animal();
-			Dog d=new Dog();
-			Animal b= new Dog();
-			a.bark();
-			d.bark();
-			b.bark();
+//			Animal a=new Animal();
+//			Dog d=new Dog();
+//			Animal b= new Dog();
+//			a.bark();
+//			d.bark();
+//			b.bark();
+			Dog a =new Dog();
 	}
 
 }
