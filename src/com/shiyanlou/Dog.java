@@ -3,6 +3,9 @@ package com.shiyanlou;
 public class Dog extends Animal {
 			
 			public Dog() {
+				super.bark();
+				super.legNum=3;
+				System.out.println(this.legNum);
 				System.out.println("子类的构造方法被调用!");
 			}
 			
